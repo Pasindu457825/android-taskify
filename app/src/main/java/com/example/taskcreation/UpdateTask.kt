@@ -1,6 +1,7 @@
 package com.example.taskcreation
 
 import TaskDbSetUp
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -36,6 +37,12 @@ class UpdateTask : AppCompatActivity() {
             db.updateTask(updatedNote)
             finish()
             Toast.makeText(this, "Changes Saved", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.backButton2.setOnClickListener {
+            val intent = Intent(this,AllTask::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

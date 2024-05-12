@@ -32,15 +32,30 @@
         android:scaleType="fitXY"
         android:src="@drawable/design_two" />
 
+    <ImageView
+        android:id="@+id/backButton1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/baseline_arrow_back_ios_24" />
+
+
     <TextView
         android:id="@+id/addTaskHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/inter_extra_bold"
-        android:text="@string/add_task"
+        android:layout_marginLeft="60sp"
         android:paddingLeft="20dp"
+        android:text="@string/add_task"
         android:textColor="@color/orange"
         android:textSize="30sp" />
 

@@ -28,6 +28,12 @@ class AllTask : AppCompatActivity() {
             val intent = Intent(this, AddTask::class.java)
             startActivity(intent)
         }
+
+        binding.backButton3.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     override fun onResume() {

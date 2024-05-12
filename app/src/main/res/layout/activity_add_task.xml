@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTask">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/design_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/design_two" />
+
+    <TextView
+        android:id="@+id/addTaskHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter_extra_bold"
+        android:text="@string/add_task"
+        android:paddingLeft="20dp"
+        android:textColor="@color/orange"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/addTaskHeading"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="13dp"
+        android:src="@drawable/baseline_done_24" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/enter_the_title"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@id/addTaskHeading"
+        android:background="@drawable/blue_border"
+        android:layout_marginTop="140dp"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="402dp"
+        android:layout_height="231dp"
+        android:layout_below="@id/titleEditText"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/blue_border"
+        android:gravity="top"
+        android:hint="@string/enter_the_description"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+    </RelativeLayout>

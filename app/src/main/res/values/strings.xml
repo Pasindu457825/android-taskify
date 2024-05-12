@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TaskCreation</string>
+    <string name="add_task">Add New Task</string>
+    <string name="enter_the_title">Enter the title</string>
+    <string name="enter_the_description">Enter the description</string>
+    <string name="add_item">Add Item</string>
+    <string name="Tasks">All Tasks</string>
+    <string name="content">Content</string>
+    <string name="title">Title</string>
+    <string name="edit_task">Edit Task.</string>
+    <string name="start">Start</string>
+    <string name="TaskTrack">Taskify</string>
+</resources>

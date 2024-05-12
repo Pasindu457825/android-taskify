@@ -36,7 +36,7 @@ class TaskAdp( private var tasks: List<Task>, Context:Context) : RecyclerView.Ad
 
         holder.updateButton.setOnClickListener{
             val intent = Intent(holder.itemView.context, UpdateTask::class.java).apply {
-                putExtra("note_id", task.id)
+                putExtra("task_id", task.id)
             }
             holder.itemView.context.startActivity(intent)
         }

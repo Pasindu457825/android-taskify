@@ -26,15 +26,15 @@ class UpdateTask : AppCompatActivity() {
             return
         }
 
-        val note = db.getTaskByID(taskId)
-        binding.updateTitleEditText.setText(note.title)
-        binding.updateContentEditText.setText(note.content)
+        val task = db.getTaskByID(taskId)
+        binding.updateTitleEditText.setText(task.title)
+        binding.updateContentEditText.setText(task.content)
 
         binding.updateSaveButton.setOnClickListener{
             val newTitle=binding.updateTitleEditText.text.toString()
             val newContent=binding.updateContentEditText.text.toString()
-            val updatedNote = Task(taskId, newTitle, newContent)
-            db.updateTask(updatedNote)
+            val updatedTask = Task(taskId, newTitle, newContent)
+            db.updateTask(updatedTask)
             finish()
             Toast.makeText(this, "Changes Saved", Toast.LENGTH_SHORT).show()
         }

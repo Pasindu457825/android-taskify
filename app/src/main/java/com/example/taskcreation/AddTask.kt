@@ -27,7 +27,7 @@ class AddTask : AppCompatActivity() {
             val task = Task(0, title, content) // Do not pass id here
             db.insertTask(task)
             finish()
-            Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Task Saved", Toast.LENGTH_SHORT).show()
         }
 
         binding.backButton1.setOnClickListener {

@@ -20,7 +20,7 @@ class UpdateTask : AppCompatActivity() {
 
         db= TaskDbSetUp(this)
 
-        taskId = intent.getIntExtra("note_id",-1)
+        taskId = intent.getIntExtra("task_id",-1)
         if (taskId == -1){
             finish()
             return

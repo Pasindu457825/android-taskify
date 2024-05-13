@@ -33,6 +33,17 @@ class UpdateTask : AppCompatActivity() {
         binding.updateSaveButton.setOnClickListener{
             val newTitle=binding.updateTitleEditText.text.toString()
             val newContent=binding.updateContentEditText.text.toString()
+
+            if (newTitle.isEmpty()) {
+                binding.updateTitleEditText.error = "Title is empty" // Show error message
+                return@setOnClickListener // Exit the click listener
+            }
+
+            if (newContent.isEmpty()) {
+                binding.updateContentEditText.error = "Content is empty" // Show error message
+                return@setOnClickListener // Exit the click listener
+            }
+
             val updatedTask = Task(taskId, newTitle, newContent)
             db.updateTask(updatedTask)
             finish()

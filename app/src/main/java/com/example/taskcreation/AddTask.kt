@@ -24,11 +24,24 @@ class AddTask : AppCompatActivity() {
         binding.saveButton.setOnClickListener {
             val title = binding.titleEditText.text.toString()
             val content = binding.contentEditText.text.toString()
-            val task = Task(0, title, content) // Do not pass id here
-            db.insertTask(task)
-            finish()
-            Toast.makeText(this, "Task Saved", Toast.LENGTH_SHORT).show()
+
+            if (title.isEmpty()) {
+                binding.titleEditText.error = "Title is empty"
+                return@setOnClickListener
+            }
+
+            if (content.isEmpty()) {
+                binding.contentEditText.error = "content is empty"
+                return@setOnClickListener
+            }
+
+                val task = Task(0, title, content) // Do not pass id here
+                db.insertTask(task)
+                finish()
+                Toast.makeText(this, "Task Saved", Toast.LENGTH_SHORT).show()
+
         }
+
 
         binding.backButton1.setOnClickListener {
             val intent = Intent(this,AllTask::class.java)
